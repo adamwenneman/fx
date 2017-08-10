@@ -1,3 +1,3 @@
 # fx
 
-Focused on CADUSD rate and fluctuations, mostly a learning-focused personal project.
+A project focused on tracking the CADUSD exchange rate. This is mostly a learning-focused personal project.
