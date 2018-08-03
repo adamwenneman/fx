@@ -10,7 +10,8 @@
 		<?php
 		// set API Endpoint and access key (and any options of your choice)
 		$endpoint = 'live';
-		$access_key = 'ACCESS_KEY_HERE';
+		include 'accesskey.php';
+		$access_key = $my_key;
 
 		// Initialize CURL:
 		$ch = curl_init('http://apilayer.net/api/'.$endpoint.'?access_key='.$access_key.'');
@@ -23,8 +24,9 @@
 		// Decode JSON response:
 		$exchangeRates = json_decode($json, true);
 
-		// Access the exchange rate values, e.g. GBP:
-		echo $exchangeRates['quotes']['USDCAD'];
+		// Access the exchange rate values, e.g. GBP and print to screen:
+		echo "USD/CAD: ", round($exchangeRates['quotes']['USDCAD'],3),"<br>";
+		echo "CAD/USD: ", round(1 / $exchangeRates['quotes']['USDCAD'],2);		
 		?>
 
 	</BODY>
