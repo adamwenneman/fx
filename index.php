@@ -26,7 +26,7 @@
 
 		// Access the exchange rate values, e.g. GBP and print to screen:
 		echo "USD/CAD: ", round($exchangeRates['quotes']['USDCAD'],3),"<br>";
-		echo "CAD/USD: ", round(1 / $exchangeRates['quotes']['USDCAD'],2);		
+		echo "CAD/USD: ", round(1 / $exchangeRates['quotes']['USDCAD'],3);		
 		?>
 
 	</BODY>
